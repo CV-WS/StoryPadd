@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.15"
+  },
+  "scripts": {
+    "watch": "yarn tailwindcss -i ./Assets/tailwind.css -o ./public/css/tailwind.css --watch"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "chokidar": "^4.0.1",
+    "commander": "^12.1.0",
+    "flowbite": "^2.5.2",
+    "postcss": "^8.4.49"
+  }
+}

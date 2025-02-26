@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+
+body {
+    background: #FFFFFF;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 6px auto;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(238,210,186,0.4) 0%, rgba(238,210,186,0) 70%);
+    z-index: -1;
+}
+
+.container p {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    color: #6e4f25;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, #fefefe, #f9f9f9);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #6e4f25;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(110, 79, 37, 0.3);
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #6e4f25, #8a6834);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #8a6834, #6e4f25);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.link-inscription {
+    display: block;
+    margin: 10px 0;
+    color: #6e4f25;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    position: relative;
+}
+
+.link-inscription:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #8a6834;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+<?php
+$css = [
+    'sign_in.css'
+];
+?>
+
+<?php foreach ($message as $key => $messages): ?>
+    <?php if (count($message) >= 1): ?>
+        <?php foreach ($messages as $msg): ?>
+            <p class="<?=$key?>"><?=$msg?></p>
+        <?php endforeach; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
+    <div class="container">
+        <form method="post" >
+<!--            <p class="hello">Bienvenue chère-->
+
+<!--             </p>-->
+            <section class="input">
+
+                <label for="email"></label>
+                <input class="champ" name="email" type="email" placeholder="Email">
+                <label for="password"></label>
+                <input class="champ" name="password" type="password" placeholder="Mot de passe">
+
+            </section>
+            <input class="champ" type="submit" value="Inscription">
+        </form>
+    </div>

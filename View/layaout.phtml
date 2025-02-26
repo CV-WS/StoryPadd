@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>StoryPadd</title>
+
+    <?=$importFile->getCss($css ? array_merge([
+        'layaout.css'
+    ], $css) : [
+        'layaout.css'
+    ]);
+    ?>
+
+</head>
+<body>
+    <header>
+        <nav class="nav-header">
+            <div class=" fontawesome">
+                <i class="fa-solid fa-heart"></i>
+                <a class="link-nav" href="/home/index">Pour vous</a>
+            </div>
+            <div class=" fontawesome">
+                <i class="fa-solid fa-list"></i>
+                <a class="link-nav" href="/category/category">Catégories</a>
+            </div>
+            <div class=" fontawesome">
+                <i class="fa-regular fa-user"></i>
+                <a class="link-nav" href="/user/connexion">Connexion</a>
+            </div>
+            <div class=" fontawesome">
+                <i class="fa-solid fa-angles-right"></i>
+                <a class="link-nav" href="">Plus</a>
+            </div>
+
+
+
+        </nav>
+    </header>
+<main>
+    <?= $template ?>
+</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Log de la méthode de la requête
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^(.*)$ - [E=REQ_METHOD:POST]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]

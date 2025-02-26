@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+body {
+    background-color: #eeeeee;
+    padding-bottom: 160px;
+    position: relative;
+}
+
+::placeholder {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "Young Serif", serif;
+    color: #888;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background: #f7f7f7;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 750px;
+    margin: auto;
+}
+
+.slogan {
+    font-size: 1.5em;
+    font-family: "Young Serif", serif;
+    text-align: center;
+    color: #6e4f25;
+}
+
+.input-title, .input-textarea, select {
+    width: 80%;
+    border-radius: 15px;
+    border: 1px solid #bbb;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: "Young Serif", serif;
+    box-shadow: 0 2px 5px rgba(110, 79, 37, 0.3);
+    background: white;
+    color: #333;
+}
+
+.input-title {
+    height: 3rem;
+    width: 15em;
+}
+
+.input-textarea {
+    height: 20rem;
+    width: 15em;
+}
+
+select {
+    height: 3rem;
+    text-align: center;
+    width: 15em;
+}
+
+option {
+    background: white;
+    color: #333;
+}
+
+.picture-one {
+    width: 60%;
+    position: absolute;
+    left: 70px;
+    bottom: 110px;
+}
+
+.picture-two {
+    width: 50%;
+    position: absolute;
+    top: 230px;
+    right: -40px;
+}

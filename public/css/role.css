@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+body {
+    background: #C8AD7F;
+}
+
+div {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(238,210,186,0.4) 0%, rgba(238,210,186,0) 70%);
+    z-index: -1;
+}
+
+h1 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    color: #6e4f25;
+    margin-bottom: 30px;
+}
+
+.category-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #6e4f25, #8a6834);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.category-button:hover {
+    background: linear-gradient(135deg, #8a6834, #6e4f25);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.category-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
