@@ -7,7 +7,7 @@ class Database
     public static function pdo(): \PDO
     {
         return new \PDO(
-            'mysql:host=db;port=3306;dbname=storypadd;charset=utf8',
+            'mysql:host=db;port=3306;dbname=db;charset=utf8',
             'root',
             'root',
             [
