@@ -3,12 +3,21 @@
 namespace App\Controllers;
 
 use App\Controllers\Controller;
-use App\Manager\StoryManager;
-use App\Repository\StoryRepository;
 
 class StoryController extends Controller
 {
-    public function index(StoryRepository $storyRepository, StoryManager $storyManager) {
-        $this->render('home/index', ['story' => $stories]);
+    private StoryRepository $storyRepository;
+
+    public function __construct()
+    {
+        $this->storyRepository = new StoryRepository();
+    }
+
+    public function resum($id)
+    {
+        // Récupérer l'histoire spécifique par ID
+        $story = $this->storyRepository->findById($id);
+
+        $this->render('story/resum');
     }
 }

@@ -31,7 +31,7 @@ body {
 
 h1 {
     font-size: 2.4em;
-    color: #222;
+    color: #8a6834;
     font-weight: 700;
     margin-bottom: 25px;
 }
@@ -60,9 +60,4 @@ h1 {
     font-family: 'Young Serif', serif;
     box-shadow: 0 2px 5px rgba(110, 79, 37, 0.3);
 }
-
-.nav-link:hover {
-    background: #e0e0e0;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(110, 79, 37, 0.5);
 }

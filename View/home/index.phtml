@@ -4,12 +4,15 @@ $css = [
 ];
 ?>
 
-
 <div>
-    <?php foreach ($story as $stories): ?>
-    <div class="container">
-        <img src="/public/images/images.jpg" alt="" class="picture">
-        <span class="info-picture">Les Ailes de la Nuit</span>
-    </div>
-    <?php endforeach ?>
+    <?php if (!empty($stories)): ?>
+        <?php foreach ($stories as $story): ?>
+            <div class="container">
+                <img src="https://picsum.photos/200/300?random=<?= rand(1, 1000) ?>" class="picture">
+                <a href="/story/resum" class="info-picture""><?= $story['title'] ?></a>
+            </div>
+        <?php endforeach ?>
+    <?php else: ?>
+        <p>Aucune histoire disponible.</p>
+    <?php endif ?>
 </div>
