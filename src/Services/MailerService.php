@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 
 class MailerService
 {
-    public function send(string $email, string $name): void
+    public function send(string $email): void
     {
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
@@ -26,7 +26,7 @@ class MailerService
 
             //Recipients
             $mail->setFrom('MS_5enX9U@trial-3z0vkloyoe1g7qrx.mlsender.net', 'storypaad');
-            $mail->addAddress($email, $name);     //Add a recipient
+            $mail->addAddress($email);     //Add a recipient
 //            $mail->addAddress('ellen@example.com');               //Name is optional
 //            $mail->addReplyTo('info@example.com', 'Information');
 //            $mail->addCC('cc@example.com');

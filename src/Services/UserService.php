@@ -10,7 +10,7 @@ use App\Repository\Repository;
 
 class UserService
 {
-    public function signInVerify(AccountManager $manager, array $post, &$message, Repository $repository, string $role): bool
+    public function signInVerify(AccountManager $manager, array $post, &$message, Repository $repository, string $role, Account &$account): bool
     {
         if (!$_SERVER["REQUEST_METHOD"] == "POST") {
             return false;
@@ -55,12 +55,10 @@ class UserService
 
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        $user = new Account();
-
-        $user->setEmail($email);
-        $user->setPassword($password);
-        $user->addRoles($role);
-        $manager->push($user);
+        $account->setEmail($email);
+        $account->setPassword($password);
+        $account->addRoles($role);
+        $manager->push($account);
 
         $message['success'][] = 'Votre compte à bien été enrtegistré. Vous pouvez maintenant vous connecter';
         return true;

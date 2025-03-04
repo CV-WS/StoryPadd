@@ -22,9 +22,10 @@ class UserController extends Controller
         }
 
         $message = ['errors' => [], 'success' => []];
+        $account = new Account();
 
-        if ($userService->signInVerify($manager, $_POST, $message, $userRepository, $role)) {
-            $mailer->send();
+        if ($userService->signInVerify($manager, $_POST, $message, $userRepository, $role, $account)) {
+            $mailer->send($account->getEmail());
             return $this->redirect('user', 'email_link');
         }
 
