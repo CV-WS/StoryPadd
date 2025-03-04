@@ -16,6 +16,10 @@ class UserService
             return false;
         }
 
+        if (!isset($post['sign_in'])) {
+            return false;
+        }
+
         $email = isset($post["email"]) && !empty($post["email"]) ? $post["email"] : NULL;
         $password = isset($post['password']) && !empty($post['password']) ? $post['password'] : NULL;
 

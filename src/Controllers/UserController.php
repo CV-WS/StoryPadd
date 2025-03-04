@@ -8,13 +8,14 @@ use App\Models\Account;
 use App\Models\User;
 use App\Repository\AccountRepository;
 use App\Repository\UserRepository;
+use App\Services\MailerService;
 use App\Services\RoleService;
 use App\Services\UserService;
 
 class UserController extends Controller
 {
 
-    public function sign_in(AccountManager $manager, UserService $userService, AccountRepository $userRepository, $role)
+    public function sign_in(AccountManager $manager, UserService $userService, AccountRepository $userRepository, MailerService $mailer, $role)
     {
         if (!array_key_exists($role, RoleService::ROLES)) {
             dd('role existe pas');
@@ -23,6 +24,7 @@ class UserController extends Controller
         $message = ['errors' => [], 'success' => []];
 
         if ($userService->signInVerify($manager, $_POST, $message, $userRepository, $role)) {
+            $mailer->send();
             return $this->redirect('user', 'email_link');
         }
 

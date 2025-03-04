@@ -2,6 +2,8 @@ name: storypadd
 type: php
 docroot: ""
 php_version: "8.2"
+router_http_port: "3000"
+router_https_port: '443'
 webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames: []
